@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflame.com/ajax/libs/jquery.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <style>
+        body {
+            background-color: #FFDAB9; /* Màu cam nhạt */
+        }
+        .container {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Xác nhận thanh toán</h1>
+        <div id="checkout-summary" class="mt-4"></div>
+        <div class="text-center mt-5">
+            <button id="confirm-payment" class="btn btn-success btn-lg">Xác nhận thanh toán</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let checkoutCart = localStorage.getItem('checkoutCart');
+            if (checkoutCart) {
+                checkoutCart = JSON.parse(checkoutCart);
+                let totalAmount = 0;
+                let html = '<table class="table table-striped"><thead><tr><th>Sản phẩm</th><th>Giá</th><th>Số lượng</th><th>Thành tiền</th></tr></thead><tbody>';
+                checkoutCart.forEach(item => {
+                    totalAmount += item.price * item.quantity;
+                    html += `<tr>
+                        <td>${item.name}</td>
+                        <td>${item.price} VND</td>
+                        <td>${item.quantity}</td>
+                        <td>${item.price * item.quantity} VND</td>
+                    </tr>`;
+                });
+                html += `<tr><td colspan="3" class="text-right"><strong>Tổng cộng</strong></td><td><strong>${totalAmount} VND</strong></td></tr>`;
+                html += '</tbody></table>';
+                $('#checkout-summary').html(html);
+            } else {
+                $('#checkout-summary').html('<h3>Không có sản phẩm nào để thanh toán!</h3>');
+            }
+
+            $("#confirm-payment").on('click', function () {
+                alert("Thanh toán thành công! Cảm ơn bạn đã mua hàng.");
+                localStorage.removeItem('checkoutCart');
+                localStorage.removeItem('cart');
+                window.location.href = "index.html";
+            });
+        });
+    </script>
+</body>
+</html>

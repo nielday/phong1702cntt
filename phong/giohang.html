@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflame.com/ajax/libs/jquery.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <style type="text/css">
+        .top {
+            background-color: rgb(255, 0, 170);
+        }
+        .footer .container {
+            background-color: #DCDCDC;
+        }
+    </style>
+</head>
+<body>
+    <!-- top -->
+    <div class="top py-1 fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 ">
+                    <a href="index.html"><img src="images/FPT_logo_2010.svg (1).png" alt="" style="width: 100px;"></a>
+                    <form method="get" action="login.html" style="float: right;">
+                        <button type="submit" class="btn btn-danger mt-2">Đăng nhập</button>
+                    </form>
+                </div>
+                <div class="col-md-4 ml-5">
+                    <form action="" class="form form-inline">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm" class="form-control-lg" style="border: none;">
+                    </form>
+                </div>
+                <div class="col-md-5 ml-5">
+                    <ul class="nav navbar-expand-sm justify-content-end" style="font-weight: bold;">
+                        <li class="nav-item"><a href="gioithieu.html" class="nav-link text-white"><i class="fas fa-bookmark"></i> Giới thiệu</a></li>
+                        <li class="nav-item"><a href="timcuahang.html" class="nav-link text-white"><i class="fas fa-map-marker"></i> Tìm cửa hàng</a></li>
+                        <li class="nav-item"><a href="giohang.html" class="nav-link text-white"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end top -->
+    <!-- main -->
+    <main class="mt-5 py-2">
+        <div class="container">
+            <a href="index.html" class="text-danger">Tiếp tục tìm kiếm sản phẩm</a>
+            <h3 style="float: right;">Giỏ hàng của bạn</h3>
+            <hr>
+            <div id="cart-items" class="text-center"></div>
+            <button class="btn btn-danger btn-lg mt-4" style="margin-left: 450px;"><a href="index.html" class="text-white">Quay lại trang chủ</a></button>
+            <button id="checkout" class="btn btn-success btn-lg mt-4" style="margin-left: 20px;">Thanh toán</button>
+        </div>
+    </main>
+    <!-- end main -->
+    <!-- footer -->
+    <div class="footer mt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Tìm cửa hàng</h4>
+                    <p>Tìm cửa hàng gần nhất</p>
+                    <p>Mua hàng từ xa</p>
+                    <h4>Phương thức thanh toán</h4>
+                </div>
+                <div class="col-md-3">
+                    <p>Gọi mua hàng</p>
+                    <p>Gọi khiếu nại</p>
+                    <p>Gọi bảo hành</p>
+                    <h4>Đối tác bảo hành</h4>
+                </div>
+                <div class="col-md-3">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="thanhtoanonline.html" class="nav-link">Mua hàng và thanh toán online</a></li>
+                        <li class="nav-item"><a href="muatragoponline.html" class="nav-link">Mua hàng trả góp online</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Tra thông tin đơn hàng</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Tra thông tin bảo hành</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Trung tâm bảo hành chính hãng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="nav">
+                        <li class="nav-item"><a href="quyche.html" class="nav-link">Quy chế hoạt động</a></li>
+                        <li class="nav-item"><a href="baohanh.html" class="nav-link">Chính sách bảo hành</a></li>
+                        <li class="nav-item"><a href="hoptac.html" class="nav-link">Liên hệ hợp tác kinh doanh</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">Đơn doanh nghiệp</a></li>
+                        <li class="nav-item"><a href="uudaidoitac.html" class="nav-link">Ưu đãi từ đối tác</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+    <!-- bottom -->
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item"><a href="" class="nav-link"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><i class="fab fa-google"></i> Google</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><i class="fab fa-twitter-square"></i> Twitter</a></li>
+            <li class="nav-item"><a href="" class="nav-link"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+    </div>
+    <!-- end bottom -->
+    <script>
+        $(document).ready(function () {
+            function displayCart() {
+                let cart = localStorage.getItem('cart');
+                if (cart) {
+                    cart = JSON.parse(cart);
+                    if (cart.length > 0) {
+                        let html = '<table class="table table-striped"><thead><tr><th>Sản phẩm</th><th>Giá</th><th>Số lượng</th><th>Thành tiền</th><th>Hành động</th></tr></thead><tbody>';
+                        cart.forEach(item => {
+                            html += `<tr>
+                                <td>${item.name}</td>
+                                <td>${item.price} VND</td>
+                                <td>${item.quantity}</td>
+                                <td>${item.price * item.quantity} VND</td>
+                                <td><button class="btn btn-danger btn-sm remove-item" data-id="${item.id}">Xóa</button></td>
+                            </tr>`;
+                        });
+                        html += '</tbody></table>';
+                        $('#cart-items').html(html);
+                    } else {
+                        $('#cart-items').html('<h3>Không có sản phẩm nào trong giỏ hàng, vui lòng tải lại trang</h3>');
+                    }
+                } else {
+                    $('#cart-items').html('<h3>Không có sản phẩm nào trong giỏ hàng, vui lòng tải lại trang</h3>');
+                }
+            }
+
+            displayCart();
+
+            $(document).on('click', '.remove-item', function () {
+                const id = $(this).data('id');
+                let cart = localStorage.getItem('cart');
+                if (cart) {
+                    cart = JSON.parse(cart);
+                    cart = cart.filter(item => item.id !== id);
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    displayCart();
+                }
+            });
+
+            $("#checkout").on('click', function () {
+                let cart = localStorage.getItem('cart');
+                if (cart) {
+                    cart = JSON.parse(cart);
+                    if (cart.length > 0) {
+                        localStorage.setItem('checkoutCart', JSON.stringify(cart));
+                        window.location.href = "payment.html";
+                    } else {
+                        alert("Giỏ hàng của bạn đang trống!");
+                    }
+                } else {
+                    alert("Giỏ hàng của bạn đang trống!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
